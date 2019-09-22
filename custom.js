@@ -36,25 +36,46 @@ $(document).ready(function(e){
 
 	drawTable($rows);
 
-	console.log($tdNum);
-
-
-
 	$categories.forEach(function($category){
 		$catRow = [];
 		if($category['parent_id'] == "0"){
 			$_id = $category['_id'];
 			$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
 			$catRow = [$cat_detail['name']];
-			drawCatTable($cat_detail['name'], $tdNum);
+			drawCatTable($cat_detail['name']);
 			$parent_id = $_id;
-			while() {
-
+			$is_leaf = false;
+			while(!$is_leaf) {
+				$cat_detail = $categories.filter(cat => cat['parent_id'] == $parent_id);
+				if($cat_detail.length == 0) {
+					$is_leaf = true;
+					drawLeafTable();
+				}else {
+					$parent_id = $cat_detail[0]['_id'];
+					$_id = $cat_detail[0]['_id'];
+					$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+					drawCatTable($cat_detail['name'])
+				}
 			}
 		}
 	});
 
-
+	$('table tr.leaf').on('click', 'td', function (){
+		$status = $(this).children().attr('status');
+		if($status == "blank") {
+			$(this).children().attr({status: 'black'});
+			$(this).children().css({'background': 'black', 'border-color': 'black'});
+		} else if ($status == "black") {
+			$(this).children().attr({status: 'grey'});
+			$(this).children().css({'background': 'grey', 'border-color': 'black'});
+		} else if($status == "grey") {
+			$(this).children().attr({status: 'white'});
+			$(this).children().css({'background': 'white', 'border-color': 'black'});
+		} else  {
+			$(this).children().attr({status: 'blank'});
+			$(this).children().css({'background': 'white', 'border-color': 'white'});
+		}
+	});
 
 });
 
@@ -83,12 +104,22 @@ function drawTable($rows) {
 	$("table").html($html);
 }
 
-function drawCatTable($name, $num) {
+function drawCatTable($name) {
 	$html = $("table").html();
 	$html += "<tr>";
 	$html += "<td>" + $name +"</td>";
-	for(var i = 0; i < $num; i++){
+	for(var i = 0; i < $tdNum; i++){
 		$html += "<td>" + "<input type='text' class='form-control'"+"</td>";
+	}
+	$html += "</tr>";
+	$("table").html($html);
+}
+function drawLeafTable(){
+	$html = $("table").html();
+	$html += "<tr class='leaf'>";
+	$html += "<td>" + "<button class='btn btn-primary' data-toggle='modal' data-target='#courseModal'>Add Course</button" +"</td>";
+	for(var i = 0; i < $tdNum; i++){
+		$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 	}
 	$html += "</tr>";
 	$("table").html($html);
