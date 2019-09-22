@@ -1,0 +1,74 @@
+JSON : program_structure_plan
+
+Sample of Data
+============================
+
+/ 1 /
+{
+"_id" : ObjectId("5d4d402a923dac0a9e716512"),
+"created_by" : 1,
+"program_id" : "5cf771980595414b095ec2f5",
+"plan_name" : {
+"1" : "plan name12",
+"2" : "plan name13",
+"6" : "plan name11"
+},
+"updated_at" : ISODate("2019-08-09T09:43:06.000Z"),
+"created_at" : ISODate("2019-08-09T09:43:06.000Z")
+}
+
+/ 2 /
+{
+"_id" : ObjectId("5d4d402a923dac0a9e716513"),
+"created_by" : 1,
+"program_id" : "5cf771980595414b095ec2f5",
+"plan_name" : {
+"1" : "plan44",
+"2" : "plan44",
+"6" : "plan44"
+},
+"updated_at" : ISODate("2019-08-09T09:43:06.000Z"),
+"created_at" : ISODate("2019-08-09T09:43:06.000Z")
+}
+
+/ 3 /
+{
+"_id" : ObjectId("5d667146923dac1b2f472f22"),
+"created_by" : 1,
+"program_id" : "5cf7ae730595414b095eef9d",
+"plan_name" : {
+"1" : "plan name12",
+"2" : "plan name13",
+"6" : "plan name11"
+},
+"updated_at" : ISODate("2019-08-28T12:19:18.000Z"),
+"created_at" : ISODate("2019-08-28T12:19:18.000Z")
+}
+
+/ 4 /
+{
+"_id" : ObjectId("5d667147923dac1b2f472f23"),
+"created_by" : 1,
+"program_id" : "5cf7ae730595414b095eef9d",
+"plan_name" : {
+"1" : "plan44",
+"2" : "plan44",
+"6" : "plan44"
+},
+"updated_at" : ISODate("2019-08-28T12:19:19.000Z"),
+"created_at" : ISODate("2019-08-28T12:19:19.000Z")
+}
+
+/ 5 /
+{
+"_id" : ObjectId("5d667147923dac1b2f472f24"),
+"created_by" : 1,
+"program_id" : "5cf7ae730595414b095eef9d",
+"plan_name" : {
+"1" : "plan name112",
+"2" : "plan name113",
+"6" : "plan name111"
+},
+"updated_at" : ISODate("2019-08-28T12:19:19.000Z"),
+"created_at" : ISODate("2019-08-28T12:19:19.000Z")
+}

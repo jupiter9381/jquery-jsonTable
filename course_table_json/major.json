@@ -1,0 +1,49 @@
+JSON : major
+
+Sample of Data
+============================
+
+/ 1 /
+{
+"_id" : ObjectId("5ce24c63923dac168a002182"),
+"major_name" : {
+"6" : "Major in Agronomy",
+"1" : "Major in Agronomy",
+"2" : "Major in Agronomy"
+},
+"status" : "1",
+"created_by" : 1,
+"updated_at" : ISODate("2019-05-20T09:36:59.000Z"),
+"created_at" : ISODate("2019-05-20T06:42:43.000Z"),
+"updated_by" : 1
+}
+
+/ 2 /
+{
+"_id" : ObjectId("5d03967d923dac1db64084d2"),
+"major_name" : {
+"6" : "major in chemestry",
+"1" : "",
+"2" : ""
+},
+"status" : "0",
+"created_by" : 1,
+"updated_at" : ISODate("2019-08-06T06:12:14.000Z"),
+"created_at" : ISODate("2019-06-14T12:43:41.000Z"),
+"updated_by" : 1
+}
+
+/ 3 /
+{
+"_id" : ObjectId("5d039688923dac1cb71720c2"),
+"major_name" : {
+"6" : "Major in Mathmetics",
+"1" : "",
+"2" : ""
+},
+"status" : "1",
+"created_by" : 1,
+"updated_at" : ISODate("2019-08-30T11:17:17.000Z"),
+"created_at" : ISODate("2019-06-14T12:43:52.000Z"),
+"updated_by" : 1
+}

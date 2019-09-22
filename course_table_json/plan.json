@@ -1,0 +1,64 @@
+JSON : plan
+
+Sample of Data
+============================
+
+/ 1 /
+{
+"_id" : ObjectId("5ce2520d923dac179d70d692"),
+"plan_sub_name" : {
+"6" : "plan sub name",
+"1" : "plan sub name",
+"2" : "plan sub name"
+},
+"plan_name" : {
+"6" : "plan name11",
+"1" : "plan name12",
+"2" : "plan name13"
+},
+"edu_lev_id" : "5cdead94923dac5f916b4302",
+"status" : "ACTIVE",
+"updated_at" : ISODate("2019-05-23T10:32:43.000Z"),
+"created_at" : ISODate("2019-05-20T07:06:53.000Z"),
+"updated_by" : 1
+}
+
+/ 2 /
+{
+"_id" : ObjectId("5ce270da923dac1dd3774762"),
+"plan_sub_name" : {
+"6" : "plan sub name44",
+"1" : "plan sub name44",
+"2" : "plan sub name44"
+},
+"plan_name" : {
+"6" : "plan44",
+"1" : "plan44",
+"2" : "plan44"
+},
+"edu_lev_id" : "5cdead94923dac5f916b4302",
+"status" : "INACTIVE",
+"created_by" : 1,
+"updated_at" : ISODate("2019-05-23T10:32:38.000Z"),
+"created_at" : ISODate("2019-05-20T09:18:18.000Z")
+}
+
+/ 3 /
+{
+"_id" : ObjectId("5ce27743923dac1ea36f59e2"),
+"plan_sub_name" : {
+"6" : "plan sub name111",
+"1" : "plan sub name112",
+"2" : "plan sub name113"
+},
+"plan_name" : {
+"6" : "plan name111",
+"1" : "plan name112",
+"2" : "plan name113"
+},
+"edu_lev_id" : "5cdead94923dac5f916b4302",
+"status" : "ACTIVE",
+"created_by" : 1,
+"updated_at" : ISODate("2019-05-20T09:58:51.000Z"),
+"created_at" : ISODate("2019-05-20T09:45:39.000Z")
+}
