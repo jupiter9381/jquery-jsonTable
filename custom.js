@@ -9,10 +9,26 @@ $(document).ready(function(e){
 	$majors = ajaxCall("/course_table_json/structure_major.json");
 	$tracks = ajaxCall("/course_table_json/structure_track.json");
 
-	$plans.forEach(function($plan) {
-		console.log($plan);
-	});
+	console.log($plans);
+	console.log($majors);
+	console.log($tracks);
 
+	$rows = [];
+	$row = [];
+	$plans.forEach(function($plan) {
+		$majors.forEach(function($major) {
+			if($major['plan_id'] == $plan['_id']){
+				$tracks.forEach(function($track){
+					if($track['major_id'] == $major['_id'] && $track['plan_id'] == $plan['_id']){
+						$row.push($plan['plan_name'][1]);
+					}
+				});
+			}
+		});
+	});
+	$rows.push($row);
+
+	drawTable($rows);
 });
 
 function ajaxCall(url) {
@@ -26,4 +42,16 @@ function ajaxCall(url) {
 	    } 
 	});
 	return data;
+}
+
+function drawTable($rows) {
+	$html = "";
+	$rows.forEach(function($row){
+		$html += "<tr>";
+		for($i = 0; $i < $row.length; $i ++){
+			$html += "<td>"+$row[$i]+"</td>"
+		}
+		$html += "</tr>";
+	});
+	$("table").html($html);
 }
