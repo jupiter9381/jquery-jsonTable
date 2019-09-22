@@ -1,214 +1,184 @@
-JSON : program_structure_major
-
-Sample of Data
-============================
-
-/ 1 /
-{
-"_id" : ObjectId("5d4d25cb923dac0a485c0092"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d25ab923dac09a968f815",
-"major_name" : {
-"1" : "Major in Agronomy",
-"2" : "Major in Agronomy",
-"6" : "Major in Agronomy"
-},
-"updated_at" : ISODate("2019-08-09T07:50:35.000Z"),
-"created_at" : ISODate("2019-08-09T07:50:35.000Z")
-}
-
-/ 2 /
-{
-"_id" : ObjectId("5d4d25cb923dac0a485c0093"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d25ab923dac09a968f815",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "major in chemestry"
-},
-"updated_at" : ISODate("2019-08-09T07:50:35.000Z"),
-"created_at" : ISODate("2019-08-09T07:50:35.000Z")
-}
-
-/ 3 /
-{
-"_id" : ObjectId("5d4d402f923dac0a9e716514"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d402a923dac0a9e716512",
-"major_name" : {
-"1" : "Major in Agronomy",
-"2" : "Major in Agronomy",
-"6" : "Major in Agronomy"
-},
-"updated_at" : ISODate("2019-08-09T09:43:11.000Z"),
-"created_at" : ISODate("2019-08-09T09:43:11.000Z")
-}
-
-/ 4 /
-{
-"_id" : ObjectId("5d4d402f923dac0a9e716515"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d402a923dac0a9e716512",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "major in chemestry"
-},
-"updated_at" : ISODate("2019-08-09T09:43:11.000Z"),
-"created_at" : ISODate("2019-08-09T09:43:11.000Z")
-}
-
-/ 5 /
-{
-"_id" : ObjectId("5d4d5e5e923dac0dcf2663d3"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d402a923dac0a9e716513",
-"major_name" : {
-"1" : "Major in Agronomy",
-"2" : "Major in Agronomy",
-"6" : "Major in Agronomy"
-},
-"updated_at" : ISODate("2019-08-09T11:51:58.000Z"),
-"created_at" : ISODate("2019-08-09T11:51:58.000Z")
-}
-
-/ 6 /
-{
-"_id" : ObjectId("5d4d5e5e923dac0dcf2663d4"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d402a923dac0a9e716513",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "major in chemestry"
-},
-"updated_at" : ISODate("2019-08-09T11:51:58.000Z"),
-"created_at" : ISODate("2019-08-09T11:51:58.000Z")
-}
-
-/ 7 /
-{
-"_id" : ObjectId("5d4d5e5e923dac0dcf2663d5"),
-"created_by" : 1,
-"program_id" : "5cf771980595414b095ec2f5",
-"plan_id" : "5d4d402a923dac0a9e716513",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "dfdsf sdfd"
-},
-"updated_at" : ISODate("2019-08-09T11:51:58.000Z"),
-"created_at" : ISODate("2019-08-09T11:51:58.000Z")
-}
-
-/ 8 /
-{
-"_id" : ObjectId("5d66714e923dac1b1d70d692"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667146923dac1b2f472f22",
-"major_name" : {
-"1" : "Major in Agronomy",
-"2" : "Major in Agronomy",
-"6" : "Major in Agronomy"
-},
-"updated_at" : ISODate("2019-08-28T12:19:26.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:26.000Z")
-}
-
-/ 9 /
-{
-"_id" : ObjectId("5d66714e923dac1b1d70d693"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667146923dac1b2f472f22",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "major in chemestry"
-},
-"updated_at" : ISODate("2019-08-28T12:19:26.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:26.000Z")
-}
-
-/ 10 /
-{
-"_id" : ObjectId("5d66714e923dac1b1d70d694"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667146923dac1b2f472f22",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : ""
-},
-"updated_at" : ISODate("2019-08-28T12:19:26.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:26.000Z")
-}
-
-/ 11 /
-{
-"_id" : ObjectId("5d667157923dac1b2f472f25"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667147923dac1b2f472f24",
-"major_name" : {
-"1" : "Major in Agronomy",
-"2" : "Major in Agronomy",
-"6" : "Major in Agronomy"
-},
-"updated_at" : ISODate("2019-08-28T12:19:35.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:35.000Z")
-}
-
-/ 12 /
-{
-"_id" : ObjectId("5d667157923dac1b2f472f26"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667147923dac1b2f472f24",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : "major in chemestry"
-},
-"updated_at" : ISODate("2019-08-28T12:19:35.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:35.000Z")
-}
-
-/ 13 /
-{
-"_id" : ObjectId("5d667157923dac1b2f472f27"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667147923dac1b2f472f24",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : ""
-},
-"updated_at" : ISODate("2019-08-28T12:19:35.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:35.000Z")
-}
-
-/ 14 /
-{
-"_id" : ObjectId("5d667157923dac1b2f472f28"),
-"created_by" : 1,
-"program_id" : "5cf7ae730595414b095eef9d",
-"plan_id" : "5d667147923dac1b2f472f24",
-"major_name" : {
-"1" : "",
-"2" : "",
-"6" : ""
-},
-"updated_at" : ISODate("2019-08-28T12:19:35.000Z"),
-"created_at" : ISODate("2019-08-28T12:19:35.000Z")
-}
+[
+	{
+		"_id" : "5d4d25cb923dac0a485c0092",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d25ab923dac09a968f815",
+		"major_name" : {
+			"1" : "Major in Agronomy",
+			"2" : "Major in Agronomy",
+			"6" : "Major in Agronomy"
+		},
+		"updated_at" : "2019-08-09T07:50:35.000Z",
+		"created_at" : "2019-08-09T07:50:35.000Z"
+	},
+	{
+		"_id" : "5d4d25cb923dac0a485c0093",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d25ab923dac09a968f815",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "major in chemestry"
+		},
+		"updated_at" : "2019-08-09T07:50:35.000Z",
+		"created_at" : "2019-08-09T07:50:35.000Z"
+	},
+	{
+		"_id" : "5d4d402f923dac0a9e716514",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d402a923dac0a9e716512",
+		"major_name" : {
+			"1" : "Major in Agronomy",
+			"2" : "Major in Agronomy",
+			"6" : "Major in Agronomy"
+		},
+		"updated_at" : "2019-08-09T09:43:11.000Z",
+		"created_at" : "2019-08-09T09:43:11.000Z"
+	},
+	{
+		"_id" : "5d4d402f923dac0a9e716515",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d402a923dac0a9e716512",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "major in chemestry"
+		},
+		"updated_at" : "2019-08-09T09:43:11.000Z",
+		"created_at" : "2019-08-09T09:43:11.000Z"
+	},
+	{
+		"_id" : "5d4d5e5e923dac0dcf2663d3",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d402a923dac0a9e716513",
+		"major_name" : {
+			"1" : "Major in Agronomy",
+			"2" : "Major in Agronomy",
+			"6" : "Major in Agronomy"
+		},
+		"updated_at" : "2019-08-09T11:51:58.000Z",
+		"created_at" : "2019-08-09T11:51:58.000Z"
+	},
+	{
+		"_id" : "5d4d5e5e923dac0dcf2663d4",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d402a923dac0a9e716513",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "major in chemestry"
+		},
+		"updated_at" : "2019-08-09T11:51:58.000Z",
+		"created_at" : "2019-08-09T11:51:58.000Z"
+	},
+	{
+		"_id" : "5d4d5e5e923dac0dcf2663d5",
+		"created_by" : 1,
+		"program_id" : "5cf771980595414b095ec2f5",
+		"plan_id" : "5d4d402a923dac0a9e716513",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "dfdsf sdfd"
+		},
+		"updated_at" : "2019-08-09T11:51:58.000Z",
+		"created_at" : "2019-08-09T11:51:58.000Z"
+	},
+	{
+		"_id" : "5d66714e923dac1b1d70d692",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667146923dac1b2f472f22",
+		"major_name" : {
+			"1" : "Major in Agronomy",
+			"2" : "Major in Agronomy",
+			"6" : "Major in Agronomy"
+		},
+		"updated_at" : "2019-08-28T12:19:26.000Z",
+		"created_at" : "2019-08-28T12:19:26.000Z"
+	},
+	{
+		"_id" : "5d66714e923dac1b1d70d693",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667146923dac1b2f472f22",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "major in chemestry"
+		},
+		"updated_at" : "2019-08-28T12:19:26.000Z",
+		"created_at" : "2019-08-28T12:19:26.000Z"
+	},
+	{
+		"_id" : "5d66714e923dac1b1d70d694",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667146923dac1b2f472f22",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : ""
+		},
+		"updated_at" : "2019-08-28T12:19:26.000Z",
+		"created_at" : "2019-08-28T12:19:26.000Z"
+	},
+	{
+		"_id" : "5d667157923dac1b2f472f25",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667147923dac1b2f472f24",
+		"major_name" : {
+			"1" : "Major in Agronomy",
+			"2" : "Major in Agronomy",
+			"6" : "Major in Agronomy"
+		},
+		"updated_at" : "2019-08-28T12:19:35.000Z",
+		"created_at" : "2019-08-28T12:19:35.000Z"
+	},
+	{
+		"_id" : "5d667157923dac1b2f472f26",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667147923dac1b2f472f24",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : "major in chemestry"
+		},
+		"updated_at" : "2019-08-28T12:19:35.000Z",
+		"created_at" : "2019-08-28T12:19:35.000Z"
+	},
+	{
+		"_id" : "5d667157923dac1b2f472f27",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667147923dac1b2f472f24",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : ""
+		},
+		"updated_at" : "2019-08-28T12:19:35.000Z",
+		"created_at" : "2019-08-28T12:19:35.000Z"
+	},
+	{
+		"_id" : "5d667157923dac1b2f472f28",
+		"created_by" : 1,
+		"program_id" : "5cf7ae730595414b095eef9d",
+		"plan_id" : "5d667147923dac1b2f472f24",
+		"major_name" : {
+			"1" : "",
+			"2" : "",
+			"6" : ""
+		},
+		"updated_at" : "2019-08-28T12:19:35.000Z",
+		"created_at" : "2019-08-28T12:19:35.000Z"
+	}
+]
