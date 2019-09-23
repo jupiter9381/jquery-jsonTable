@@ -1,0 +1,316 @@
+[
+	{
+		"_id" : "5cebc416923dac2a500ef2e2",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "1",
+		"name" : {
+			"6" : "Application development",
+			"1" : "Application development",
+			"2" : "Application development"
+		},
+		"credit" : "12",
+		"credit1" : "4",
+		"credit2" : "4",
+		"credit3" : "4",
+		"op_year" : "2018",
+		"description" : {
+			"6" : "sdfsdfsfd",
+			"1" : "sdfsdfsfd",
+			"2" : "sdfsdfsfd"
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [],
+		"subj_together" : [],
+		"updated_at" : "2019-06-19T04:55:48.000Z",
+		"created_at" : "2019-05-27T11:03:50.000Z",
+		"course_code" : "C-2993",
+		"course_cat" : null,
+		"updated_by" : 1
+	},
+	{
+		"_id" : "5cebc722923dac2a827f7d22",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "2",
+		"name" : {
+			"6" : "social science",
+			"1" : "social science",
+			"2" : "social science"
+		},
+		"credit" : "15",
+		"credit1" : "5",
+		"credit2" : "5",
+		"credit3" : "5",
+		"op_year" : "2017",
+			"description" : {
+			"6" : "social science description",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [],
+		"subj_together" : [],
+		"updated_at" : "2019-09-06T07:44:22.000Z",
+		"created_at" : "2019-05-27T11:16:50.000Z",
+		"course_code" : "C-2994",
+		"updated_by" : 1
+	},
+	{
+		"_id" : "5cebc75f923dac2ae14e7db2",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "1",
+		"name" : {
+			"6" : "Mathematics",
+			"1" : "Mathematics",
+			"2" : "Mathematics"
+		},
+		"credit" : "20",
+		"credit1" : "5",
+		"credit2" : "5",
+		"credit3" : "10",
+		"op_year" : "2016",
+		"description" : {
+			"6" : "Mathematics description",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [],
+		"subj_together" : [],
+		"updated_at" : "2019-05-27T11:17:51.000Z",
+		"created_at" : "2019-05-27T11:17:51.000Z",
+		"course_code" : "C-2995"
+	},
+	{
+		"_id" : "5cebca6d923dac2a827f7d23",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "2",
+		"name" : {
+			"6" : "Physics",
+			"1" : "Physics",
+			"2" : "Physics"
+		},
+		"credit" : "27",
+		"credit1" : "9",
+		"credit2" : "9",
+		"credit3" : "9",
+		"op_year" : "2014",
+		"description" : {
+			"6" : "fsfsdfsdf",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [],
+		"subj_together" : [],
+		"updated_at" : "2019-05-27T11:30:53.000Z",
+		"created_at" : "2019-05-27T11:30:53.000Z",
+		"course_code" : "C-2996"
+	},
+	{
+		"_id" : "5cebcab5923dac2b72189082",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "1",
+		"name" : {
+			"6" : "Chemistry",
+			"1" : "Chemistry",
+			"2" : "Chemistry"
+		},
+		"credit" : "30",
+		"credit1" : "10",
+		"credit2" : "10",
+		"credit3" : "10",
+		"op_year" : "2015",
+		"description" : {
+			"6" : "Chemistry description",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [],
+		"subj_together" : [],
+		"updated_at" : "2019-05-27T11:32:05.000Z",
+		"created_at" : "2019-05-27T11:32:05.000Z",
+		"course_code" : "C-2997"
+	},
+	{
+		"_id" : "5cebcb2b923dac2bec3e7f62",
+		"faculty_code" : "FAC23232325",
+		"type_id" : "1",
+		"name" : {
+		"6" : "BBA",
+		"1" : "BBA",
+		"2" : "BBA"
+		},
+		"credit" : "15",
+		"credit1" : "5",
+		"credit2" : "5",
+		"credit3" : "5",
+		"op_year" : "2017",
+		"description" : {
+		"6" : "Bachelor of Business Administration",
+		"1" : "",
+		"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"prerequisite" : [ 
+			{
+				"row_index" : 0,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebcab5923dac2b72189082",
+				"course_id" : "C-2997"
+			}, 
+			{
+				"row_index" : 1,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc722923dac2a827f7d22",
+				"course_id" : "C-2994"
+			}, 
+			{
+				"row_index" : 2,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc416923dac2a500ef2e2",
+				"course_id" : "C-2993"
+			}, 
+			{
+				"row_index" : 3,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc75f923dac2ae14e7db2",
+				"course_id" : "C-2995"
+			}, 
+			{
+				"row_index" : 3,
+				"cols_index" : 1,
+				"add_cols" : false,
+				"_id" : "5cebca6d923dac2a827f7d23",
+				"course_id" : "C-2996"
+			}
+		],
+		"subj_together" : [ 
+			{
+				"row_index" : 0,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebcab5923dac2b72189082",
+				"course_id" : "C-2997"
+			}, 
+			{
+				"row_index" : 1,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc722923dac2a827f7d22",
+				"course_id" : "C-2994"
+			}, 
+			{
+				"row_index" : 2,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc416923dac2a500ef2e2",
+				"course_id" : "C-2993"
+			}, 
+			{
+				"row_index" : 3,
+				"cols_index" : 0,
+				"add_cols" : false,
+				"_id" : "5cebc75f923dac2ae14e7db2",
+				"course_id" : "C-2995"
+			}, 
+			{
+				"row_index" : 3,
+				"cols_index" : 1,
+				"add_cols" : false,
+				"_id" : "5cebca6d923dac2a827f7d23",
+				"course_id" : "C-2996"
+			}
+		],
+		"updated_at" : "2019-05-27T11:34:03.000Z",
+		"created_at" : "2019-05-27T11:34:03.000Z",
+		"course_code" : "C-2998"
+	},
+	{
+		"_id" : "5cebdafc923dac2fdd66a722",
+		"faculty_code" : "CAGDSDSD",
+		"course_code" : "C-2999",
+		"type_id" : "1",
+		"name" : {
+			"6" : "course A",
+			"1" : "course A",
+			"2" : "course A"
+		},
+		"credit" : "12",
+		"credit1" : "4",
+		"credit2" : "4",
+		"credit3" : "4",
+		"op_year" : "2017",
+		"description" : {
+			"6" : "course A desc",
+			"1" : "course A desc",
+			"2" : "course A desc"
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"updated_at" : "2019-05-27T12:41:32.000Z",
+		"created_at" : "2019-05-27T12:41:32.000Z"
+	},
+	{
+		"_id" : "5d1b086d923dac1456171c42",
+		"faculty_code" : "CAGDSDSD",
+		"course_code" : "B-TECH ",
+		"type_id" : "1",
+		"name" : {
+			"6" : "Bitech",
+			"1" : "Bitech",
+			"2" : "Bitech"
+		},
+		"credit" : "10",
+		"credit1" : "8",
+		"credit2" : "2",
+		"credit3" : "5",
+		"op_year" : "2562",
+		"description" : {
+			"6" : "all e;r",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"updated_at" : "2019-08-20T13:09:56.000Z",
+		"created_at" : "2019-07-02T07:31:57.000Z",
+		"course_cat" : null,
+		"updated_by" : 1
+	},
+	{
+		"_id" : "5d652850923dac1ded725002",
+		"faculty_code" : "CAGDSDSD",
+		"course_code" : "c-7859",
+		"type_id" : "1",
+		"name" : {
+			"6" : "rt ertrt",
+			"1" : "rt ertrt",
+			"2" : "rt ertrt"
+		},
+		"credit" : "12",
+		"credit1" : "2",
+		"credit2" : "3",
+		"credit3" : "4",
+		"op_year" : "2562",
+		"description" : {
+			"6" : "rter trt",
+			"1" : "",
+			"2" : ""
+		},
+		"status" : "ACTIVE",
+		"created_by" : 1,
+		"updated_at" : "2019-08-27T12:55:44.000Z",
+		"created_at" : "2019-08-27T12:55:44.000Z"
+	}
+]
