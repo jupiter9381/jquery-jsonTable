@@ -16,6 +16,8 @@ $(document).ready(function(e){
 	$selectedCourse = [];
 	$courses.forEach(function($course){$selectedCourse.push(false)});
 
+	$course_values = [];
+
 	drawCourseTable($courses);
 
 	$rows = [];
@@ -49,28 +51,30 @@ $(document).ready(function(e){
 			$_id = $category['_id'];
 			$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
 			$catRow = [$cat_detail['name']];
-			drawCatTable($cat_detail['name']);
+			drawCatTable($cat_detail);
 			$parent_id = $_id;
 			$is_leaf = false;
 			while(!$is_leaf) {
 				$cat_detail = $categories.filter(cat => cat['parent_id'] == $parent_id);
 				if($cat_detail.length == 0) {
 					$is_leaf = true;
-					drawLeafTable();
+					drawLeafTable($parent_id);
 				}else {
 					for($j = 0; $j < $cat_detail.length; $j++){
 						$parent_id = $cat_detail[$j]['_id'];
 						$_id = $cat_detail[$j]['_id'];
 						$cat_item = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
-						drawCatTable($cat_item['name']);
+						drawCatTable($cat_item);
 					}
 				}
 			}
 		}
 	});
 	$selectedRow = "";
+	$leaf_id = "";
 	$('#course_management tr td').on('click', 'button', function (){
 		$selectedRow = $(this).parent().parent();
+		$leaf_id = $selectedRow.attr('leaf-id');
 		drawCourseTable($courses);
 	});
 
@@ -101,6 +105,40 @@ $(document).ready(function(e){
 		$(this).parent().parent().remove();
 	});
 
+	$(".export_btn").click(function(e){
+		$total = {};
+		$total.plan = $plans;
+		$total.major = $majors;
+		$total.track = $tracks;
+
+		$tr_categories = $("#course_management tr.category");
+		$cat_val = [];
+		for($i = 0; $i < $tr_categories.length; $i++){
+			$values = [];
+			$td_array = $($tr_categories[$i]).find("td");
+			for($j = 1; $j < $td_array.length; $j++){
+				$values.push($($($td_array[$j]).find("input")[0]).val());
+			}
+			$data = {cat_id: $($tr_categories[$i]).attr('cat-id'), cat_name: $($td_array[0]).html(), values: $values};
+			$cat_val.push($data);
+		}
+		$total.category = $cat_val;
+
+		$tr_courses = $("#course_management tr.leaf");
+		$course_val = [];
+		for($i = 0; $i < $tr_courses.length; $i++){
+			$values = [];
+			$td_array = $($tr_courses[$i]).find("td");
+			for($j = 1; $j < $td_array.length - 1; $j++){
+				$values.push($($($td_array[$j]).find("div")[0]).attr('status'));
+			}
+			$data = {leaf_id: $($tr_categories[$i]).attr('cat-id'), leaf_name: $($td_array[0]).html(), values: $values};
+			$course_val.push($data);
+		}
+		
+		$total.course = $course_val;
+
+	});
 });
 
 
@@ -130,19 +168,19 @@ function drawTable($rows) {
 }
 
 
-function drawCatTable($name) {
+function drawCatTable($detail) {
 	$html = $("#course_management").html();
-	$html += "<tr>";
-	$html += "<td>" + $name +"</td>";
+	$html += "<tr class='category' cat-id='"+$detail['cat_id']+"'>";
+	$html += "<td>" + $detail['name'] +"</td>";
 	for(var i = 0; i < $tdNum; i++){
 		$html += "<td>" + "<input type='text' class='form-control'"+"</td>";
 	}
 	$html += "</tr>";
 	$("#course_management").html($html);
 }
-function drawLeafTable(){
+function drawLeafTable($parent_id){
 	$html = $("#course_management").html();
-	$html += "<tr>";
+	$html += "<tr class='course' leaf-id='"+$parent_id+"'>";
 	$html += "<td>" + "<button class='btn btn-primary' data-toggle='modal' data-target='#courseModal'>Add Course</button" +"</td>";
 	for(var i = 0; i < $tdNum; i++){
 		$html += "<td></td>";
@@ -155,7 +193,7 @@ function drawCourse($index, $obj){
 	$course = $courses[$index];
 	$selectedCourse[$index] = true;
 	$html = "";
-	$html += "<tr class='leaf'>";
+	$html += "<tr class='leaf' leaf-id='"+$leaf_id+"'>";
 	$html += "<td>" + $course['course_code'] + " "+ $course['name'][$lang_id] + "</td>";
 	for(var i = 0; i < $tdNum; i++){
 		$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
