@@ -46,5 +46,22 @@
 		"updated_at" : "2019-08-07T07:28:20.000Z",
 		"created_at" : "2019-08-07T07:14:46.000Z",
 		"updated_by" : 1
+	},
+	{
+		"_id" : "5d4a7a66923dac1a9564fdb8",
+		"parent_id" : "5d481e8f923dac136b23ee52",
+		"program_id" : "5cf771980595414b095ec2f5",
+		"categories" : "F",
+		"hide_subject" : "1",
+		"hide_description" : "1",
+		"free_elective_category" : "1",
+		"general_education_category" : "1",
+		"general_education_option" : "standard",
+		"group_subject" : "2017",
+		"url" : "f-category",
+		"created_by" : 1,
+		"updated_at" : "2019-08-07T07:28:20.000Z",
+		"created_at" : "2019-08-07T07:14:46.000Z",
+		"updated_by" : 1
 	}
 ]

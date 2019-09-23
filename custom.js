@@ -4,13 +4,14 @@ $(document).ready(function(e){
 	var plans = [];
 
 	$lang_id = 1;
- 	
- 	$all_categories = ajaxCall("/course_table_json/category_desc.json");
- 	$categories = ajaxCall("/course_table_json/category.json");
-	$plans = ajaxCall("/course_table_json/structure_plan.json");
-	$majors = ajaxCall("/course_table_json/structure_major.json");
-	$tracks = ajaxCall("/course_table_json/structure_track.json");
-	$courses = ajaxCall("/course_table_json/course.json");
+ 		
+
+ 	$all_categories = ajaxCall("course_table_json/category_desc.json");
+ 	$categories = ajaxCall("course_table_json/category.json");
+	$plans = ajaxCall("course_table_json/structure_plan.json");
+	$majors = ajaxCall("course_table_json/structure_major.json");
+	$tracks = ajaxCall("course_table_json/structure_track.json");
+	$courses = ajaxCall("course_table_json/course.json");
 
 	drawCourseTable($courses);
 
@@ -54,10 +55,12 @@ $(document).ready(function(e){
 					$is_leaf = true;
 					drawLeafTable();
 				}else {
-					$parent_id = $cat_detail[0]['_id'];
-					$_id = $cat_detail[0]['_id'];
-					$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
-					drawCatTable($cat_detail['name'])
+					for($j = 0; $j < $cat_detail.length; $j++){
+						$parent_id = $cat_detail[$j]['_id'];
+						$_id = $cat_detail[$j]['_id'];
+						$cat_item = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+						drawCatTable($cat_item['name']);
+					}
 				}
 			}
 		}
@@ -72,8 +75,25 @@ $(document).ready(function(e){
 		drawCourse($index, $selectedRow);
 	});
 
+	$('body').on('click', 'tr.leaf td', function (){
+		$status = $(this).children().attr('status');
+		if($status == "blank") {
+			$(this).children().attr({status: 'black'});
+			$(this).children().css({'background': 'black', 'border-color': 'black'});
+		} else if ($status == "black") {
+			$(this).children().attr({status: 'grey'});
+			$(this).children().css({'background': 'grey', 'border-color': 'black'});
+		} else if($status == "grey") {
+			$(this).children().attr({status: 'white'});
+			$(this).children().css({'background': 'white', 'border-color': 'black'});
+		} else if($status == "white") {
+			$(this).children().attr({status: 'blank'});
+			$(this).children().css({'background': 'white', 'border-color': 'white'});
+		}
+	});
 
 });
+
 
 function ajaxCall(url) {
 	var data;
@@ -133,22 +153,7 @@ function drawCourse($index, $obj){
 	$($html).insertBefore($obj);
 	$("#courseModal").modal('toggle');
 
-	$('#course_management tr.leaf').on('click', 'td', function (){
-		$status = $(this).children().attr('status');
-		if($status == "blank") {
-			$(this).children().attr({status: 'black'});
-			$(this).children().css({'background': 'black', 'border-color': 'black'});
-		} else if ($status == "black") {
-			$(this).children().attr({status: 'grey'});
-			$(this).children().css({'background': 'grey', 'border-color': 'black'});
-		} else if($status == "grey") {
-			$(this).children().attr({status: 'white'});
-			$(this).children().css({'background': 'white', 'border-color': 'black'});
-		} else if($status == "white") {
-			$(this).children().attr({status: 'blank'});
-			$(this).children().css({'background': 'white', 'border-color': 'white'});
-		}
-	});
+	
 }
 function drawCourseTable($courses){
 	$html = "";

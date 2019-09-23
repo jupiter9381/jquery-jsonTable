@@ -88,5 +88,35 @@
 		"description" : "E Category",
 		"updated_at" :  "2019-08-07T07:28:20.000Z",
 		"created_at" :  "2019-08-07T07:14:46.000Z"
+	},
+	{
+		"_id" : "5d4a7a66923dac1a9564fdb6",
+		"cat_id" : "5d4a7a66923dac1a9564fdb8",
+		"lang_id" : 6,
+		"name" : "F Category",
+		"code" : "F Category",
+		"description" : "E Category",
+		"updated_at" :  "2019-08-07T07:28:20.000Z",
+		"created_at" :  "2019-08-07T07:14:46.000Z"
+	},
+	{
+		"_id" : "5d4a7a66923dac1a9564fdb7",
+		"cat_id" : "5d4a7a66923dac1a9564fdb8",
+		"lang_id" : 1,
+		"name" : "F Category",
+		"code" : "F Category",
+		"description" : "F Category",
+		"updated_at" :  "2019-08-07T07:28:20.000Z",
+		"created_at" :  "2019-08-07T07:14:46.000Z"
+	},
+	{
+		"_id" : "5d4a7a66923dac1a9564fdb9",
+		"cat_id" : "5d4a7a66923dac1a9564fdb8",
+		"lang_id" : 2,
+		"name" : "F Category",
+		"code" : "F Category",
+		"description" : "F Category",
+		"updated_at" :  "2019-08-07T07:28:20.000Z",
+		"created_at" :  "2019-08-07T07:14:46.000Z"
 	}
 ]
