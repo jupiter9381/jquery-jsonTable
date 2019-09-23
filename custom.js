@@ -137,6 +137,16 @@ $(document).ready(function(e){
 		}
 		
 		$total.course = $course_val;
+		$.ajax({ 
+		    url: "function.php", 
+		    dataType: 'json', 
+		    data: {data: $total, method: 'generate'},
+		    method: "post",
+		    async: false, 
+		    success: function(data){ 
+		    	console.log(data)
+		    } 
+		});
 
 	});
 });
