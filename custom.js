@@ -13,6 +13,9 @@ $(document).ready(function(e){
 	$tracks = ajaxCall("course_table_json/structure_track.json");
 	$courses = ajaxCall("course_table_json/course.json");
 
+	$selectedCourse = [];
+	$courses.forEach(function($course){$selectedCourse.push(false)});
+
 	drawCourseTable($courses);
 
 	$rows = [];
@@ -68,9 +71,10 @@ $(document).ready(function(e){
 	$selectedRow = "";
 	$('#course_management tr td').on('click', 'button', function (){
 		$selectedRow = $(this).parent().parent();
+		drawCourseTable($courses);
 	});
 
-	$('#course_list tbody tr td').on('click', '.add_course', function (){
+	$('body').on('click', '#course_list .add_course', function (){
 		$index = $(this).attr('course-index');
 		drawCourse($index, $selectedRow);
 	});
@@ -90,6 +94,13 @@ $(document).ready(function(e){
 			$(this).children().attr({status: 'blank'});
 			$(this).children().css({'background': 'white', 'border-color': 'white'});
 		}
+	});
+	$('body').on('click', 'button.remove_course', function (){
+		$index = $(this).attr('course-index');
+		console.log($index);
+		$selectedCourse[$index] = false;
+		$(this).parent().parent().remove();
+		console.log($selectedCourse);
 	});
 
 });
@@ -143,12 +154,14 @@ function drawLeafTable(){
 }
 function drawCourse($index, $obj){
 	$course = $courses[$index];
+	$selectedCourse[$index] = true;
 	$html = "";
 	$html += "<tr class='leaf'>";
 	$html += "<td>" + $course['course_code'] + " "+ $course['name'][$lang_id] + "</td>";
 	for(var i = 0; i < $tdNum; i++){
 		$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 	}
+	$html += "<td><button class='btn btn-info remove_course' course-index='"+$index+"'>Remove</button></td>";
 	$html += "</tr>";
 	$($html).insertBefore($obj);
 	$("#courseModal").modal('toggle');
@@ -159,7 +172,12 @@ function drawCourseTable($courses){
 	$html = "";
 	for($i = 0; $i < $courses.length; $i++){
 		$html += "<tr>";
-		$html += "<td><button type='button' class='btn btn-primary add_course' course-index='"+$i+"'>Add</button></td>";
+		if($selectedCourse[$i]==false){
+			$html += "<td><button type='button' class='btn btn-primary add_course' course-index='"+$i+"'>Add</button></td>";
+		} else {
+			$html += "<td></td>";
+		}
+		
 		$html += "<td>" + $courses[$i]['course_code'] + "</td>";
 		$html += "<td>" + $courses[$i]['name'][$lang_id] + "</td>";
 		$html += "</tr>";
