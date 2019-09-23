@@ -97,10 +97,8 @@ $(document).ready(function(e){
 	});
 	$('body').on('click', 'button.remove_course', function (){
 		$index = $(this).attr('course-index');
-		console.log($index);
 		$selectedCourse[$index] = false;
 		$(this).parent().parent().remove();
-		console.log($selectedCourse);
 	});
 
 });
@@ -130,6 +128,7 @@ function drawTable($rows) {
 	});
 	$("#course_management").html($html);
 }
+
 
 function drawCatTable($name) {
 	$html = $("#course_management").html();
