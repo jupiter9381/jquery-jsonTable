@@ -250,7 +250,7 @@ function drawCourse($index, $obj){
 	$course = $courses[$index];
 	$selectedCourse[$index] = true;
 	$html = "";
-	$html += "<tr class='leaf' leaf-id='"+$leaf_id+"'>";
+	$html += "<tr class='leaf' leaf-id='"+$leaf_id+"' course-id='"+$course['_id']+"'>";
 	$html += "<td>" + $course['course_code'] + " "+ $course['name'][$lang_id] + "</td>";
 	for(var i = 0; i < $tdNum; i++){
 		$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
