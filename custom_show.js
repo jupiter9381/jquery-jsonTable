@@ -125,7 +125,8 @@ $(document).ready(function(e){
 		$total.track = $tracks;
 		$total.category = $categories;
 		$total.all_categories = $all_categories;
-		
+		$total.course = $courses;
+
 		$tr_categories = $("#course_management tr.category");
 		$cat_val = [];
 		for($i = 0; $i < $tr_categories.length; $i++){
@@ -147,11 +148,12 @@ $(document).ready(function(e){
 			for($j = 1; $j < $td_array.length - 1; $j++){
 				$values.push($($($td_array[$j]).find("div")[0]).attr('status'));
 			}
-			$data = {leaf_id: $($tr_categories[$i]).attr('cat-id'), leaf_name: $($td_array[0]).html(), values: $values};
+			$data = {leaf_id: $($tr_courses[$i]).attr('leaf-id'), leaf_name: $($td_array[0]).html(), values: $values, course_id: $($tr_courses[$i]).attr('course-id')};
 			$course_val.push($data);
 		}
 		
 		$total.course_val = $course_val;
+
 		$.ajax({ 
 		    url: "function.php", 
 		    dataType: 'json', 
@@ -205,9 +207,11 @@ function drawCatTable($detail, $cat_val) {
 }
 function drawExistingLeafTable($item) {
 	$course = $item;
+	console.log($item);
 	$course_id = $item['course_id'];
-	$leaf_id = $item['lead_id'];
+	$leaf_id = $item['leaf_id'];
 	$values = $item['values'];
+
 	//$index = $courses.filter(course => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
 	$index = $courses.findIndex(course => course['_id'] == $course_id);
 	$selectedCourse[$index] = true;
@@ -217,11 +221,11 @@ function drawExistingLeafTable($item) {
 	$html += "<td>" + $course['course_code'] + " "+ $course['name'][$lang_id] + "</td>";
 	for(var i = 0; i < $tdNum; i++){
 		if($values[i] == 'black'){
-			$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: black; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
+			$html += "<td><div class='cicle' status='black' style='border: 1px solid #fff; padding: 10px 11px; background: black; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 		} else if ($values[i] == "white") {
-			$html += "<td><div class='cicle' status='blank' style='border: 1px solid #000; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
+			$html += "<td><div class='cicle' status='white' style='border: 1px solid #000; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 		} else if($values[i] == "grey") {
-			$html += "<td><div class='cicle' status='blank' style='border: 1px solid #000; padding: 10px 11px; background: grey; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
+			$html += "<td><div class='cicle' status='grey' style='border: 1px solid #000; padding: 10px 11px; background: grey; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 		} else if ($values[i] == "blank") {
 			$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;'></div></td>";
 		}
