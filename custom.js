@@ -13,6 +13,7 @@ $(document).ready(function(e){
 	$tracks = ajaxCall("course_table_json/structure_track.json");
 	$courses = ajaxCall("course_table_json/course.json");
 
+	console.log($categories);
 	$selectedCourse = [];
 	$courses.forEach(function($course){$selectedCourse.push(false)});
 
@@ -49,7 +50,8 @@ $(document).ready(function(e){
 		$catRow = [];
 		if($category['parent_id'] == "0"){
 			$_id = $category['_id'];
-			$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+			//$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+			$cat_detail = $category['subjectcategorydesc'];
 			$catRow = [$cat_detail['name']];
 			drawCatTable($cat_detail);
 			$parent_id = $_id;
@@ -63,7 +65,8 @@ $(document).ready(function(e){
 					for($j = 0; $j < $cat_detail.length; $j++){
 						$parent_id = $cat_detail[$j]['_id'];
 						$_id = $cat_detail[$j]['_id'];
-						$cat_item = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+						//$cat_item = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+						$cat_item = $cat_detail[$j]['subjectcategorydesc'];
 						drawCatTable($cat_item);
 					}
 				}
