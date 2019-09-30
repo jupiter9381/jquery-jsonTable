@@ -6,14 +6,15 @@ $(document).ready(function(e){
 	$lang_id = 1;
  		
 
- 	$all_categories = ajaxCall("course_table_json/category_desc.json");
+ 	//$all_categories = ajaxCall("course_table_json/category_desc.json");
  	$categories = ajaxCall("course_table_json/category.json");
 	$plans = ajaxCall("course_table_json/structure_plan.json");
 	$majors = ajaxCall("course_table_json/structure_major.json");
 	$tracks = ajaxCall("course_table_json/structure_track.json");
 	$courses = ajaxCall("course_table_json/course.json");
 
-	console.log($categories);
+	$structure = ajaxCall("course_table_json/structure.json");
+	console.log($structure);
 	$selectedCourse = [];
 	$courses.forEach(function($course){$selectedCourse.push(false)});
 
@@ -26,7 +27,18 @@ $(document).ready(function(e){
 	$major_row = ["Major"];
 	$track_row = ["Track"];
 	$tdNum = 0;
-	$plans.forEach(function($plan) {
+	$structure.forEach(function($plan){
+		$majors = $plan['has_major'];
+		$majors.forEach(function($major){
+			$tracks = $major['has_track'];
+			$tracks.forEach(function($track){
+				$plan_row.push($plan['plan_name'][$lang_id]);
+				$major_row.push($major['major_name'][$lang_id]);
+				$track_row.push($track['track_name']);
+			})
+		});
+	});
+	/*$plans.forEach(function($plan) {
 		$majors.forEach(function($major) {
 			if($major['plan_id'] == $plan['_id']){
 				$tracks.forEach(function($track){
@@ -39,7 +51,7 @@ $(document).ready(function(e){
 				});
 			}
 		});
-	});
+	});*/
 	$rows.push($plan_row);
 	$rows.push($major_row);
 	$rows.push($track_row);

@@ -1,0 +1,81 @@
+{
+  "mapping_data": [
+    {
+      "abet_lo_id": "5d8cb0f65831722ab21fb992",
+      "abet_skill_id": "5d8cb0f65831722ab21fb993",
+      "ohec_lo_id": "5d79cbfa72da3c3df5522aa3",
+      "ohec_skill_id": "5d79cbfa72da3c3df5522aa4",
+      "ohec_outcome_index": 1,
+      "value": 0
+    },
+    {
+      "abet_lo_id": "5d8cb0f65831722ab21fb992",
+      "abet_skill_id": "5d8cb0f65831722ab21fb993",
+      "ohec_lo_id": "5d79cbfa72da3c3df5522aa3",
+      "ohec_skill_id": "5d79cbfa72da3c3df5522aa4",
+      "ohec_outcome_index": 2,
+      "value": 0
+    },
+    {
+      "abet_lo_id": "5d8cb0f65831722ab21fb992",
+      "abet_skill_id": "5d8cb0f65831722ab21fb994",
+      "ohec_lo_id": "5d79cbfa72da3c3df5522aa3",
+      "ohec_skill_id": "5d79cbfa72da3c3df5522aa4",
+      "ohec_outcome_index": 1,
+      "value": 0
+    },
+    {
+      "abet_lo_id": "5d8cb0f65831722ab21fb992",
+      "abet_skill_id": "5d8cb0f65831722ab21fb994",
+      "ohec_lo_id": "5d79cbfa72da3c3df5522aa3",
+      "ohec_skill_id": "5d79cbfa72da3c3df5522aa4",
+      "ohec_outcome_index": 2,
+      "value": 0
+    }
+  ],
+  "left_data": [
+    {
+      "_id": "5d8cb0f65831722ab21fb993",
+      "lid": "5d8cb0f65831722ab21fb992",
+      "sname": {
+        "de": "side1_1"
+      },
+      "detail": {
+        "outcome_one": [],
+        "outcome_two": [],
+        "outcome_three": []
+      }
+    },
+    {
+      "_id": "5d8cb0f65831722ab21fb994",
+      "lid": "5d8cb0f65831722ab21fb992",
+      "sname": {
+        "de": "side1_2"
+      },
+      "detail": {
+        "outcome_one": [],
+        "outcome_two": [],
+        "outcome_three": []
+      }
+    }
+  ],
+  "top_data": [
+    {
+      "_id": "5d79cbfa72da3c3df5522aa4",
+      "lid": "5d79cbfa72da3c3df5522aa3",
+      "sname": {
+        "de": "test"
+      },
+      "detail": {
+        "outcome_one": [
+          {
+            "de": "test1"
+          },
+          {
+            "de": "test2"
+          }
+        ]
+      }
+    }
+  ]
+}
