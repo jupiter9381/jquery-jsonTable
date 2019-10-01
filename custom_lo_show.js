@@ -1,9 +1,11 @@
 $(document).ready(function(){
-	$data = ajaxCall("course_table_json/lo.json");
+	$table_data = ajaxCall("lo_results.json");
+	$table_data = $table_data[0];
 
 	$lang = 'de';
-	$leftColumns = $data['left_data'];
-	$topColumns = $data['top_data'];
+	$leftColumns = $table_data['left_data'];
+	$topColumns = $table_data['top_data'];
+	$mapping_data = $table_data['mapping_data'];
 
 	$topData = [];
 	$tdNum = 0;
@@ -84,6 +86,7 @@ $(document).ready(function(){
 			}
 		}
 		$total.mapping_data = $lo_val;
+		
 		$.ajax({ 
 		    url: "function.php", 
 		    dataType: 'json', 
@@ -101,13 +104,20 @@ $(document).ready(function(){
 function drawBody($leftData) {
 	$html = $("#lo_management tbody").html();
 
-	console.log($topData);
-	$leftData.forEach($left => {
+	$leftData.forEach(($left, $row) => {
 		$html += "<tr class='leaf'>";
 		$html += "<td>"+$left['name']+"</td>";
-		$topData.forEach($top => {
+		$tdIndex = 0;
+		$topData.forEach(($top, $column) => {
 			$top['detail'].forEach($detail => {
-				$html += "<td><div class='cicle' status='blank' style='border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;' top-lid='"+$detail['lid']+"' top-id='"+$detail['_id']+"' left-lid='"+$left['lid']+"' left-id='"+$left['_id']+"' top-index='"+$detail['index']+"'></div></td>";
+				$cell = $mapping_data[$row * $tdNum  + $tdIndex];
+				if($cell['value'] == 0) {$status = "blank"; $style="border: 1px solid #fff; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;";}
+				if($cell['value'] == 1) {$status = "black"; $style="border: 1px solid #fff; padding: 10px 11px; background: black; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;";}
+				if($cell['value'] == 2) {$status = "grey"; $style="border: 1px solid #000; padding: 10px 11px; background: grey; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;"}
+				if($cell['value'] == 3) {$status = "white"; $style="border: 1px solid #000; padding: 10px 11px; background: white; border-radius: 50%; margin-left: auto; margin-right: auto; width: 1%;"}
+
+				$html += "<td><div class='cicle' status='"+$status+"' style='"+$style+"' top-lid='"+$detail['lid']+"' top-id='"+$detail['_id']+"' left-lid='"+$left['lid']+"' left-id='"+$left['_id']+"' top-index='"+$detail['index']+"'></div></td>";
+				$tdIndex++;
 			});
 		});
 		$html += "</tr>";

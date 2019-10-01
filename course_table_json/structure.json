@@ -1,1 +1,190 @@
-[{"_id":"5d667146923dac1b2f472f22","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_name":{"1":"plan name12","2":"plan name13","6":"plan name11"},"updated_at":"2019-08-28 12:19:18","created_at":"2019-08-28 12:19:18","has_major":[{"_id":"5d66714e923dac1b1d70d692","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_name":{"1":"Major in Agronomy","2":"Major in Agronomy","6":"Major in Agronomy"},"updated_at":"2019-08-28 12:19:26","created_at":"2019-08-28 12:19:26","has_track":[{"_id":"5d8c5a1a923dac11cd5dcd72","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_id":"5d66714e923dac1b1d70d692","track_name":"sASA","updated_at":"2019-09-26 06:26:34","created_at":"2019-09-26 06:26:34"},{"_id":"5d8c5a1f923dac11cd5dcd73","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_id":"5d66714e923dac1b1d70d692","track_name":"asA SAs","updated_at":"2019-09-26 06:26:39","created_at":"2019-09-26 06:26:39"}]},{"_id":"5d66714e923dac1b1d70d693","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_name":{"1":"","2":"","6":"major in chemestry"},"updated_at":"2019-08-28 12:19:26","created_at":"2019-08-28 12:19:26","has_track":[{"_id":"5d8c5a23923dac11cd5dcd74","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_id":"5d66714e923dac1b1d70d693","track_name":"asA SAs","updated_at":"2019-09-26 06:26:43","created_at":"2019-09-26 06:26:43"}]},{"_id":"5d66714e923dac1b1d70d694","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_name":{"1":"","2":"","6":""},"updated_at":"2019-08-28 12:19:26","created_at":"2019-08-28 12:19:26","has_track":[{"_id":"5d8c5a27923dac11cd5dcd75","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667146923dac1b2f472f22","major_id":"5d66714e923dac1b1d70d694","track_name":"asASAs","updated_at":"2019-09-26 06:26:47","created_at":"2019-09-26 06:26:47"}]}]},{"_id":"5d667147923dac1b2f472f23","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_name":{"1":"plan44","2":"plan44","6":"plan44"},"updated_at":"2019-08-28 12:19:19","created_at":"2019-08-28 12:19:19","has_major":[]},{"_id":"5d667147923dac1b2f472f24","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_name":{"1":"plan name112","2":"plan name113","6":"plan name111"},"updated_at":"2019-08-28 12:19:19","created_at":"2019-08-28 12:19:19","has_major":[{"_id":"5d667157923dac1b2f472f25","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667147923dac1b2f472f24","major_name":{"1":"Major in Agronomy","2":"Major in Agronomy","6":"Major in Agronomy"},"updated_at":"2019-08-28 12:19:35","created_at":"2019-08-28 12:19:35","has_track":[]},{"_id":"5d667157923dac1b2f472f26","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667147923dac1b2f472f24","major_name":{"1":"","2":"","6":"major in chemestry"},"updated_at":"2019-08-28 12:19:35","created_at":"2019-08-28 12:19:35","has_track":[]},{"_id":"5d667157923dac1b2f472f27","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667147923dac1b2f472f24","major_name":{"1":"","2":"","6":""},"updated_at":"2019-08-28 12:19:35","created_at":"2019-08-28 12:19:35","has_track":[]},{"_id":"5d667157923dac1b2f472f28","created_by":1,"program_id":"5cf7ae730595414b095eef9d","plan_id":"5d667147923dac1b2f472f24","major_name":{"1":"","2":"","6":""},"updated_at":"2019-08-28 12:19:35","created_at":"2019-08-28 12:19:35","has_track":[]}]}]
+[
+  {
+    "_id": "5d91f713923dac0d60401a32",
+    "created_by": 1,
+    "program_id": "5cf7ae730595414b095eef9d",
+    "plan_name": {
+      "1": "plan name12",
+      "2": "plan name13",
+      "6": "plan name11"
+    },
+    "updated_at": "2019-09-30 12:37:39",
+    "created_at": "2019-09-30 12:37:39",
+    "has_major": [
+      {
+        "_id": "5d91f83e923dac0d60401a34",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a32",
+        "major_name": {
+          "1": "Major in Agronomy",
+          "2": "Major in Agronomy",
+          "6": "Major in Agronomy"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d91ffec923dac0ee3420792",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a32",
+            "major_id": "5d91f83e923dac0d60401a34",
+            "track_name": "demo",
+            "updated_at": "2019-09-30 13:15:24",
+            "created_at": "2019-09-30 13:15:24"
+          },
+          {
+            "_id": "5d9200f4923dac0ed5470242",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a32",
+            "major_id": "5d91f83e923dac0d60401a34",
+            "track_name": "demo track",
+            "updated_at": "2019-09-30 13:19:48",
+            "created_at": "2019-09-30 13:19:48"
+          }
+        ]
+      },
+      {
+        "_id": "5d91f83e923dac0d60401a35",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a32",
+        "major_name": {
+          "1": "major in chemestry",
+          "2": "major in chemestry",
+          "6": "major in chemestry"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d9200bd923dac0e75765332",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a32",
+            "major_id": "5d91f83e923dac0d60401a35",
+            "track_name": "dem1",
+            "updated_at": "2019-09-30 13:18:53",
+            "created_at": "2019-09-30 13:18:53"
+          }
+        ]
+      },
+      {
+        "_id": "5d91f83e923dac0d60401a36",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a32",
+        "major_name": {
+          "1": "major in math",
+          "2": "major in math",
+          "6": "major in math"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d9200c5923dac0ee3420793",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a32",
+            "major_id": "5d91f83e923dac0d60401a36",
+            "track_name": "demo2",
+            "updated_at": "2019-09-30 13:19:01",
+            "created_at": "2019-09-30 13:19:01"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5d91f713923dac0d60401a33",
+    "created_by": 1,
+    "program_id": "5cf7ae730595414b095eef9d",
+    "plan_name": {
+      "1": "plan44",
+      "2": "plan44",
+      "6": "plan44"
+    },
+    "updated_at": "2019-09-30 12:37:39",
+    "created_at": "2019-09-30 12:37:39",
+    "has_major": [
+      {
+        "_id": "5d91f83e923dac0d60401a37",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a33",
+        "major_name": {
+          "1": "Major in Agronomy",
+          "2": "Major in Agronomy",
+          "6": "Major in Agronomy"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d9200d6923dac0ef82bac02",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a33",
+            "major_id": "5d91f83e923dac0d60401a37",
+            "track_name": "demo3",
+            "updated_at": "2019-09-30 13:19:18",
+            "created_at": "2019-09-30 13:19:18"
+          }
+        ]
+      },
+      {
+        "_id": "5d91f83e923dac0d60401a38",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a33",
+        "major_name": {
+          "1": "major in physics",
+          "2": "major in physics",
+          "6": "major in physics"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d9200df923dac0efa298642",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a33",
+            "major_id": "5d91f83e923dac0d60401a38",
+            "track_name": "demo5",
+            "updated_at": "2019-09-30 13:19:27",
+            "created_at": "2019-09-30 13:19:27"
+          }
+        ]
+      },
+      {
+        "_id": "5d91f83e923dac0d60401a39",
+        "created_by": 1,
+        "program_id": "5cf7ae730595414b095eef9d",
+        "plan_id": "5d91f713923dac0d60401a33",
+        "major_name": {
+          "1": "major in math",
+          "2": "major in math",
+          "6": "major in math"
+        },
+        "updated_at": "2019-09-30 12:42:38",
+        "created_at": "2019-09-30 12:42:38",
+        "has_track": [
+          {
+            "_id": "5d9200e6923dac0efa298643",
+            "created_by": 1,
+            "program_id": "5cf7ae730595414b095eef9d",
+            "plan_id": "5d91f713923dac0d60401a33",
+            "major_id": "5d91f83e923dac0d60401a39",
+            "track_name": "demno6",
+            "updated_at": "2019-09-30 13:19:34",
+            "created_at": "2019-09-30 13:19:34"
+          }
+        ]
+      }
+    ]
+  }
+]

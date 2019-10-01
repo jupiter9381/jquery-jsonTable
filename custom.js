@@ -14,7 +14,7 @@ $(document).ready(function(e){
 	$courses = ajaxCall("course_table_json/course.json");
 
 	$structure = ajaxCall("course_table_json/structure.json");
-	console.log($structure);
+
 	$selectedCourse = [];
 	$courses.forEach(function($course){$selectedCourse.push(false)});
 
@@ -32,6 +32,7 @@ $(document).ready(function(e){
 		$majors.forEach(function($major){
 			$tracks = $major['has_track'];
 			$tracks.forEach(function($track){
+				$tdNum++;
 				$plan_row.push($plan['plan_name'][$lang_id]);
 				$major_row.push($major['major_name'][$lang_id]);
 				$track_row.push($track['track_name']);
@@ -58,6 +59,7 @@ $(document).ready(function(e){
 
 	drawTable($rows);
 
+
 	$categories.forEach(function($category){
 		$catRow = [];
 		if($category['parent_id'] == "0"){
@@ -70,6 +72,7 @@ $(document).ready(function(e){
 			$is_leaf = false;
 			while(!$is_leaf) {
 				$cat_detail = $categories.filter(cat => cat['parent_id'] == $parent_id);
+				
 				if($cat_detail.length == 0) {
 					$is_leaf = true;
 					drawLeafTable($parent_id);
@@ -122,11 +125,8 @@ $(document).ready(function(e){
 
 	$(".export_btn").click(function(e){
 		$total = {};
-		$total.plan = $plans;
-		$total.major = $majors;
-		$total.track = $tracks;
+		$total.structure = $structure;
 		$total.category = $categories;
-		$total.all_categories = $all_categories;
 		$total.course = $courses;
 
 		$tr_categories = $("#course_management tr.category");

@@ -8,11 +8,8 @@ $(document).ready(function(e){
 	$table_data = ajaxCall("results.json");
 	$table_data = $table_data[0];
 
- 	$all_categories = $table_data['all_categories'];
  	$categories = $table_data['category'];
-	$plans = $table_data['plan'];
-	$majors = $table_data['major'];
-	$tracks = $table_data['track'];
+	$structure = $table_data['structure'];
 	$courses = $table_data['course'];
 
 	$cat_val = $table_data['cat_val'];
@@ -30,20 +27,19 @@ $(document).ready(function(e){
 	$major_row = ["Major"];
 	$track_row = ["Track"];
 	$tdNum = 0;
-	$plans.forEach(function($plan) {
-		$majors.forEach(function($major) {
-			if($major['plan_id'] == $plan['_id']){
-				$tracks.forEach(function($track){
-					if($track['major_id'] == $major['_id'] && $track['plan_id'] == $plan['_id']){
-						$tdNum++;
-						$plan_row.push($plan['plan_name'][$lang_id]);
-						$major_row.push($major['major_name'][$lang_id]);
-						$track_row.push($track['track_name']);
-					}
-				});
-			}
+	$structure.forEach(function($plan){
+		$majors = $plan['has_major'];
+		$majors.forEach(function($major){
+			$tracks = $major['has_track'];
+			$tracks.forEach(function($track){
+				$tdNum++;
+				$plan_row.push($plan['plan_name'][$lang_id]);
+				$major_row.push($major['major_name'][$lang_id]);
+				$track_row.push($track['track_name']);
+			})
 		});
 	});
+
 	$rows.push($plan_row);
 	$rows.push($major_row);
 	$rows.push($track_row);
@@ -54,7 +50,7 @@ $(document).ready(function(e){
 		$catRow = [];
 		if($category['parent_id'] == "0"){
 			$_id = $category['_id'];
-			$cat_detail = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+			$cat_detail = $category['subjectcategorydesc'];
 			$catRow = [$cat_detail['name']];
 
 			$index = $cat_val.findIndex($val => $val['cat_id'] == $cat_detail['cat_id']);
@@ -64,6 +60,7 @@ $(document).ready(function(e){
 			$is_leaf = false;
 			while(!$is_leaf) {
 				$cat_detail = $categories.filter(cat => cat['parent_id'] == $parent_id);
+				
 				if($cat_detail.length == 0) {
 					$is_leaf = true;
 					$course_rows = $course_val.filter($course => $course['leaf_id'] == $parent_id);
@@ -75,7 +72,8 @@ $(document).ready(function(e){
 					for($j = 0; $j < $cat_detail.length; $j++){
 						$parent_id = $cat_detail[$j]['_id'];
 						$_id = $cat_detail[$j]['_id'];
-						$cat_item = $all_categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+						//$cat_item = $categories.filter(cat => cat['cat_id'] == $_id && cat['lang_id'] == $lang_id)[0];
+						$cat_item = $cat_detail[$j]['subjectcategorydesc'];
 						$index = $cat_val.findIndex($val => $val['cat_id'] == $cat_item['cat_id']);
 						drawCatTable($cat_item, $cat_val[$index]);
 					}
@@ -120,11 +118,8 @@ $(document).ready(function(e){
 
 	$(".export_btn").click(function(e){
 		$total = {};
-		$total.plan = $plans;
-		$total.major = $majors;
-		$total.track = $tracks;
+		$total.structure = $structure;
 		$total.category = $categories;
-		$total.all_categories = $all_categories;
 		$total.course = $courses;
 
 		$tr_categories = $("#course_management tr.category");
@@ -207,7 +202,6 @@ function drawCatTable($detail, $cat_val) {
 }
 function drawExistingLeafTable($item) {
 	$course = $item;
-	console.log($item);
 	$course_id = $item['course_id'];
 	$leaf_id = $item['leaf_id'];
 	$values = $item['values'];
